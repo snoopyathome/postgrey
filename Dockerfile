@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-RUN apk add --update postgrey make &&\
+RUN apk add --update postgrey make perl-utils &&\
     cpan -i NetAddr::IP &&\
     apk del make &&\
     rm -rf /var/cache/apk/*
